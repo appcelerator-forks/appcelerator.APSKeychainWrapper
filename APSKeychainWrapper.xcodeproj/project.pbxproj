@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */; };
+		DB5E130D1DDE0B3B00CE6C3D /* libAPSKeychainWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */; };
 		DBF19E2F1DDE061800D04747 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */; };
 		DBF19E301DDE061800D04747 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB5E130E1DDE0B3B00CE6C3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBF19E221DDE061800D04747 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBF19E291DDE061800D04747;
+			remoteInfo = APSKeychainWrapper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DBF19E281DDE061800D04747 /* CopyFiles */ = {
@@ -25,12 +37,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APSKeychainWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapperTests.m; sourceTree = "<group>"; };
+		DB5E130C1DDE0B3B00CE6C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPSKeychainWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APSKeychainWrapper.h; sourceTree = "<group>"; };
 		DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB5E13051DDE0B3B00CE6C3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5E130D1DDE0B3B00CE6C3D /* libAPSKeychainWrapper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBF19E271DDE061800D04747 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB5E13091DDE0B3B00CE6C3D /* APSKeychainWrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */,
+				DB5E130C1DDE0B3B00CE6C3D /* Info.plist */,
+			);
+			path = APSKeychainWrapperTests;
+			sourceTree = "<group>";
+		};
 		DBF19E211DDE061800D04747 = {
 			isa = PBXGroup;
 			children = (
 				DBF19E2C1DDE061800D04747 /* APSKeychainWrapper */,
+				DB5E13091DDE0B3B00CE6C3D /* APSKeychainWrapperTests */,
 				DBF19E2B1DDE061800D04747 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */,
+				DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB5E13071DDE0B3B00CE6C3D /* APSKeychainWrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5E13121DDE0B3B00CE6C3D /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */;
+			buildPhases = (
+				DB5E13041DDE0B3B00CE6C3D /* Sources */,
+				DB5E13051DDE0B3B00CE6C3D /* Frameworks */,
+				DB5E13061DDE0B3B00CE6C3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB5E130F1DDE0B3B00CE6C3D /* PBXTargetDependency */,
+			);
+			name = APSKeychainWrapperTests;
+			productName = APSKeychainWrapperTests;
+			productReference = DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DBF19E291DDE061800D04747 /* APSKeychainWrapper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBF19E331DDE061800D04747 /* Build configuration list for PBXNativeTarget "APSKeychainWrapper" */;
@@ -95,6 +147,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Appcelerator;
 				TargetAttributes = {
+					DB5E13071DDE0B3B00CE6C3D = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
 					DBF19E291DDE061800D04747 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
@@ -114,11 +170,30 @@
 			projectRoot = "";
 			targets = (
 				DBF19E291DDE061800D04747 /* APSKeychainWrapper */,
+				DB5E13071DDE0B3B00CE6C3D /* APSKeychainWrapperTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DB5E13061DDE0B3B00CE6C3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		DB5E13041DDE0B3B00CE6C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBF19E261DDE061800D04747 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,7 +204,35 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DB5E130F1DDE0B3B00CE6C3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBF19E291DDE061800D04747 /* APSKeychainWrapper */;
+			targetProxy = DB5E130E1DDE0B3B00CE6C3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		DB5E13101DDE0B3B00CE6C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = APSKeychainWrapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.APSKeychainWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB5E13111DDE0B3B00CE6C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = APSKeychainWrapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.APSKeychainWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DBF19E311DDE061800D04747 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -239,6 +342,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB5E13121DDE0B3B00CE6C3D /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5E13101DDE0B3B00CE6C3D /* Debug */,
+				DB5E13111DDE0B3B00CE6C3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DBF19E251DDE061800D04747 /* Build configuration list for PBXProject "APSKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
