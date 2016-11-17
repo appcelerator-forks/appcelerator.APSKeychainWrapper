@@ -88,7 +88,22 @@ typedef NSString *APSErrorDomain;
  The delegate to be used with the `APSKeychainWrapper` to get notified
  about keychain events.
  */
-@property(nonatomic, assign)id<APSKeychainWrapperDelegate>delegate;
+@property(unsafe_unretained) id<APSKeychainWrapperDelegate> delegate;
+
+/**
+ Initializes an `APSKeychainWrapper` object with the specified options.
+ The combination of the `identifier` and `service` represents the private
+ key of the keychain item.
+ 
+ @param identifier The identifier of the keychain item.
+ @param service The service of the keychain item.
+ @param accessGroup The access group of the keychain item.
+
+ @return The newly-initialized keychain item
+ */
+- (id)initWithIdentifier:(NSString*)identifier
+                 service:(NSString*)service
+             accessGroup:(NSString*)accessGroup;
 
 /**
  Initializes an `APSKeychainWrapper` object with the specified options.
@@ -100,7 +115,7 @@ typedef NSString *APSErrorDomain;
  @param accessGroup The access group of the keychain item.
  @param accessibilityMode The accessibility mode of the keychain item.
  @param accessControlMode The access-control mode of the keychain item.
-
+ 
  @return The newly-initialized keychain item
  */
 - (id)initWithIdentifier:(NSString*)identifier

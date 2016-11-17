@@ -10,6 +10,17 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
 
 @implementation APSKeychainWrapper
 
+- (id)initWithIdentifier:(NSString *)identifier
+                 service:(NSString *)service
+             accessGroup:(NSString *)accessGroup
+{
+    return [self initWithIdentifier:identifier
+                            service:service
+                        accessGroup:accessGroup
+                  accessibilityMode:nil
+                  accessControlMode:0];
+}
+
 - (id)initWithIdentifier:(NSString*)identifier
                  service:(NSString*)service
              accessGroup:(NSString*)accessGroup
@@ -17,9 +28,9 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
        accessControlMode:(SecAccessControlCreateFlags)accessControlMode
 {
     if (self = [super init]) {
-        _identifier = [identifier copy];
-        _service = [service copy];
-        _accessGroup = [accessGroup copy];
+        _identifier = identifier;
+        _service = service;
+        _accessGroup = accessGroup;
         _accessibilityMode = accessibilityMode;
         _accessControlMode = accessControlMode;
         
@@ -80,7 +91,7 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
         if (status == noErr) {
             [[self delegate] APSKeychainWrapper:self didReadValueWithResult:@{
                 @"success": @YES,
-                @"value": [[NSString alloc] initWithData:(NSData*)keychainData encoding:NSUTF8StringEncoding]
+                @"value": [[NSString alloc] initWithData:(__bridge NSData*)keychainData encoding:NSUTF8StringEncoding]
             }];
         } else {
             [[self delegate] APSKeychainWrapper:self didReadValueWithError:[APSKeychainWrapper errorFromStatus:status]];
@@ -143,30 +154,29 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
 {
     if (baseAttributes) {
         [baseAttributes removeAllObjects];
-        [baseAttributes release];
         baseAttributes = nil;
     }
     
-    baseAttributes = [[NSMutableDictionary dictionaryWithDictionary:@{
+    baseAttributes = [NSMutableDictionary dictionaryWithDictionary:@{
         (id)kSecClass: (id)kSecClassGenericPassword,
         (id)kSecAttrAccount: _identifier,
         (id)kSecAttrService: _service,
         (id)kSecAttrAccount: @"",
         (id)kSecAttrLabel: @"",
         (id)kSecAttrDescription: @""
-    }] retain];
+    }];
     
     if (_accessibilityMode) {
         CFErrorRef error = NULL;
         SecAccessControlRef accessControl = SecAccessControlCreateWithFlags(kCFAllocatorDefault, _accessibilityMode, _accessControlMode, &error);
         
         if (error == NULL || accessControl != NULL) {
-            [baseAttributes setObject:(id)accessControl forKey:(id)kSecAttrAccessControl];
+            [baseAttributes setObject:(__bridge id)accessControl forKey:(id)kSecAttrAccessControl];
             [baseAttributes setObject:(id)kSecUseAuthenticationUIAllow forKey:(id)kSecUseAuthenticationUI];
             
             CFRelease(accessControl);
         } else {
-            NSLog(@"Error: Could not create access control: %@", [(NSError*)error localizedDescription]);
+            NSLog(@"Error: Could not create access control: %@", [(__bridge NSError*)error localizedDescription]);
             
             if (accessControl) {
                 CFRelease(accessControl);
