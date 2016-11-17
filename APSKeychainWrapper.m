@@ -14,7 +14,7 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
                  service:(NSString*)service
              accessGroup:(NSString*)accessGroup
        accessibilityMode:(CFStringRef)accessibilityMode
-       accessControlMode:(long)accessControlMode
+       accessControlMode:(SecAccessControlCreateFlags)accessControlMode
 {
     if (self = [super init]) {
         _identifier = [identifier copy];

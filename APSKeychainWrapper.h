@@ -107,7 +107,7 @@ typedef NSString *APSErrorDomain;
                  service:(NSString*)service
              accessGroup:(NSString*)accessGroup
        accessibilityMode:(CFStringRef)accessibilityMode
-       accessControlMode:(long)accessControlMode;
+       accessControlMode:(SecAccessControlCreateFlags)accessControlMode;
 
 /**
  Checks if an item exists already.
