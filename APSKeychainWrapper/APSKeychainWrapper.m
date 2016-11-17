@@ -71,11 +71,6 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
 
 - (void)read
 {
-    if (![self exists]) {
-        [_delegate APSKeychainWrapper:self didReadValueWithError:[APSKeychainWrapper errorFromStatus:errSecItemNotFound]];
-        return;
-    }
-        
     // Special attributes to fetch data
     [baseAttributes setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
     [baseAttributes setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
