@@ -31,6 +31,9 @@ APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifi
 // Save
 [keychainItem save:@"my_secret_password"];
 
+// Update
+[keychainItem update:@"my_new_secret_password"];
+
 // Reset
 [keychainItem reset];
 
@@ -52,6 +55,16 @@ APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifi
 - (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didReadValueWithError:(NSError *)error
 {
     // Keychain value not received, error occurred
+}
+
+-(void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didUpdateValueWithResult:(NSDictionary *)result
+{
+    // Keychain value updated successfully
+}
+
+- (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didUpdateValueWithError:(NSError *)error
+{
+    // Keychain value not updated, error occurred
 }
 
 - (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didDeleteValueWithResult:(NSDictionary *)result
