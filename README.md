@@ -86,9 +86,9 @@ Hans Knoechel ([@hansemannnn](https://twitter.com/hansemannnn) / [Web](http://ha
 Apache 2.0
 
 ### Legal
-This module is Copyright (c) 2016-present by Appcelerator, Inc. All Rights Reserved. Usage of this module is subject 
-to the Terms of Service agreement with Appcelerator, Inc.
+This module is Copyright (c) 2016 by Axway. All Rights Reserved. Usage of this module is subject 
+to the Terms of Service agreement with Axway, Inc.
 
 
 ### Contributing
-Code contributions are greatly appreciated, please submit a new [pull request](https://github.com/hansemannn/APSKeychainWrapper/pull/new/master)!
+Code contributions are greatly appreciated, please submit a new [pull request](https://github.com/appcelerator/APSKeychainWrapper/pull/new/master)!
