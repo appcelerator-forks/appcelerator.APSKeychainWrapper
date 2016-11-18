@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */; };
-		DB5E130D1DDE0B3B00CE6C3D /* libAPSKeychainWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */; };
+		DB6D9AF41DDE4CF300DC5C28 /* libAPSKeychainWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */; };
 		DBF19E2F1DDE061800D04747 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */; };
 		DBF19E301DDE061800D04747 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB5E130D1DDE0B3B00CE6C3D /* libAPSKeychainWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6D9AF41DDE4CF300DC5C28 /* libAPSKeychainWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +349,7 @@
 				DB5E13111DDE0B3B00CE6C3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBF19E251DDE061800D04747 /* Build configuration list for PBXProject "APSKeychainWrapper" */ = {
 			isa = XCConfigurationList;

@@ -9,17 +9,21 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
 
 ```objc
 // Create a new keychain item instance
-APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifier:@"mypassword"
+APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifier:@"myaccount"
                                                                            service:@"com.appcelerator.service"
                                                                        accessGroup:@"com.appcelerator.keychain"
                                                                  accessibilityMode:kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
-                                                                 accessControlMode:kSecAccessControlTouchIDAny];
+                                                                 accessControlMode:kSecAccessControlTouchIDAny
+                                                                           options:@{@"u_OpPrompt": @"Please authenticate yourself before"}];
 
 // Implement the APSKeychainWrapperDelegate in your class before
 [keychainItem setDelegate:self];
 
-// Check existence
-BOOL *exists = [keychainItem exists];
+// Check existence asynchronously, since the result might be
+// delayed by the user-interacton (e.g. Touch ID)
+[keychainItem exists:^(BOOL result) {
+    NSLog(@"Does item exist: %lu", result);
+}];
 
 // Read
 [keychainItem read];

@@ -18,14 +18,16 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
                             service:service
                         accessGroup:accessGroup
                   accessibilityMode:nil
-                  accessControlMode:0];
+                  accessControlMode:0
+                            options:nil];
 }
 
 - (id)initWithIdentifier:(NSString*)identifier
                  service:(NSString*)service
              accessGroup:(NSString*)accessGroup
        accessibilityMode:(CFStringRef)accessibilityMode
-       accessControlMode:(long)accessControlMode
+       accessControlMode:(SecAccessControlCreateFlags)accessControlMode
+                 options:(NSDictionary*)options
 {
     if (self = [super init]) {
         _identifier = identifier;
@@ -33,6 +35,7 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
         _accessGroup = accessGroup;
         _accessibilityMode = accessibilityMode;
         _accessControlMode = accessControlMode;
+        _options = options;
         
         [self initializeBaseAttributes];
     }
@@ -40,16 +43,27 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
     return self;
 }
 
-- (BOOL)exists
+- (void)exists:(void (^)(BOOL result))completionBlock;
 {
-    OSStatus status = SecItemCopyMatching((CFDictionaryRef)(@{
-        (id)kSecClass: (id)kSecClassGenericPassword,
-        (id)kSecMatchLimit: (id)kSecMatchLimitOne,
-        (id)kSecAttrService: _service,
-        (id)kSecAttrAccount: _identifier,
-    }), NULL);
+    __block BOOL exists = NO;
+    [baseAttributes setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
     
-    return status == noErr;
+    // Use a semaphore to wait for the asyncronous user-feedback
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
+    
+    // Dispatch into our priority queue
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        OSStatus status = SecItemCopyMatching((CFDictionaryRef)(baseAttributes), NULL);
+        exists = (status == noErr);
+        dispatch_semaphore_signal(sem);
+    });
+    
+    // Double-check: If this returns a non-zero value, the user never reacted to
+    // the authentication (e.g. Touch ID), so we should return __NO__
+    long exitCode = dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    
+    [baseAttributes removeObjectForKey:(id)kSecMatchLimit];
+    completionBlock(exists && exitCode == 0);
 }
 
 - (void)save:(NSString*)value
@@ -176,6 +190,16 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
             if (accessControl) {
                 CFRelease(accessControl);
             }
+        }
+    }
+    
+    // Making it possible to apply more options to keep it flexible
+    if (_options) {
+        for (id key in [_options allKeys]) {
+            if ([baseAttributes objectForKey:key]) {
+                NSLog(@"Warning: The option %@ is already part of the base attributes, overriding it now", key);
+            }
+            [baseAttributes setObject:[_options objectForKey:(id)key] forKey:(id)key];
         }
     }
     

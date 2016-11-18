@@ -80,6 +80,7 @@ typedef NSString *APSErrorDomain;
     NSString *_identifier;
     NSString *_service;
     NSString *_accessGroup;
+    NSDictionary *_options;
     CFStringRef _accessibilityMode;
     SecAccessControlCreateFlags _accessControlMode;
 }
@@ -122,14 +123,14 @@ typedef NSString *APSErrorDomain;
                  service:(NSString*)service
              accessGroup:(NSString*)accessGroup
        accessibilityMode:(CFStringRef)accessibilityMode
-       accessControlMode:(long)accessControlMode;
+       accessControlMode:(SecAccessControlCreateFlags)accessControlMode
+                 options:(NSDictionary*)options;
 
 /**
  Checks if an item exists already.
  
- @return __TRUE__ if the item exists, __FALSE__ otherwise.
  */
-- (BOOL)exists;
+- (void)exists:(void (^)(BOOL result))completionBlock;
 
 /**
  Saves a new value to the keychain. The value is identified by it's keychain
