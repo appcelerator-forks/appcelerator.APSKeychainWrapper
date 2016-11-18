@@ -47,7 +47,7 @@ APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifi
     // Keychain value not saved, error occurred
 }
 
--(void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didReadValueWithResult:(NSDictionary *)result
+- (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didReadValueWithResult:(NSDictionary *)result
 {
     // Keychain value received successfully
 }
@@ -57,7 +57,7 @@ APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifi
     // Keychain value not received, error occurred
 }
 
--(void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didUpdateValueWithResult:(NSDictionary *)result
+- (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didUpdateValueWithResult:(NSDictionary *)result
 {
     // Keychain value updated successfully
 }
@@ -84,6 +84,11 @@ Hans Knoechel ([@hansemannnn](https://twitter.com/hansemannnn) / [Web](http://ha
 
 ### License
 Apache 2.0
+
+### Legal
+This module is Copyright (c) 2016-present by Appcelerator, Inc. All Rights Reserved. Usage of this module is subject 
+to the Terms of Service agreement with Appcelerator, Inc.
+
 
 ### Contributing
 Code contributions are greatly appreciated, please submit a new [pull request](https://github.com/hansemannn/APSKeychainWrapper/pull/new/master)!
