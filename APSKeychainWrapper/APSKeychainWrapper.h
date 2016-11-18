@@ -37,6 +37,22 @@ typedef NSString *APSErrorDomain;
 - (void)APSKeychainWrapper:(APSKeychainWrapper*)keychainWrapper didSaveValueWithError:(NSError*)error;
 
 /**
+ Triggered when a value was successfully updated to the keychain.
+ 
+ @param keychainWrapper The keychain wrapper that triggered this action.
+ @param result The result of the operation.
+ */
+- (void)APSKeychainWrapper:(APSKeychainWrapper*)keychainWrapper didUpdateValueWithResult:(NSDictionary*)result;
+
+/**
+ Triggered when a value could not be updated to the keychain.
+ 
+ @param keychainWrapper The keychain wrapper that triggered this action.
+ @param error The occurred error of the operation.
+ */
+- (void)APSKeychainWrapper:(APSKeychainWrapper*)keychainWrapper didUpdateValueWithError:(NSError*)error;
+
+/**
  Triggered when a value was successfully received from the keychain.
  
  @param keychainWrapper The keychain wrapper that triggered this action.
@@ -129,6 +145,7 @@ typedef NSString *APSErrorDomain;
 /**
  Checks if an item exists already.
  
+ @param completionBlock The block to be invoked when the existence has been determined.
  */
 - (void)exists:(void (^)(BOOL result))completionBlock;
 
@@ -145,6 +162,14 @@ typedef NSString *APSErrorDomain;
  keychain item identifier and an optional access-group.
  */
 - (void)read;
+
+/**
+ Updates a existing value to the keychain. The value is identified by it's keychain
+ item identifier and an optional access-group.
+ 
+ @param value The value to save in the iOS keychain.
+ */
+- (void)update:(NSString*)value;
 
 /**
  Deletes a value from the keychain. The value is identified by it's

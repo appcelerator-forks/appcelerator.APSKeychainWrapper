@@ -8,20 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */; };
-		DB6D9AF41DDE4CF300DC5C28 /* libAPSKeychainWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */; };
 		DBF19E2F1DDE061800D04747 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */; };
 		DBF19E301DDE061800D04747 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DB5E130E1DDE0B3B00CE6C3D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBF19E221DDE061800D04747 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DBF19E291DDE061800D04747;
-			remoteInfo = APSKeychainWrapper;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DBF19E281DDE061800D04747 /* CopyFiles */ = {
@@ -57,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB6D9AF41DDE4CF300DC5C28 /* libAPSKeychainWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +102,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				DB5E130F1DDE0B3B00CE6C3D /* PBXTargetDependency */,
 			);
 			name = APSKeychainWrapperTests;
 			productName = APSKeychainWrapperTests;
@@ -203,14 +190,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DB5E130F1DDE0B3B00CE6C3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DBF19E291DDE061800D04747 /* APSKeychainWrapper */;
-			targetProxy = DB5E130E1DDE0B3B00CE6C3D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DB5E13101DDE0B3B00CE6C3D /* Debug */ = {

@@ -108,6 +108,19 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
     });
 }
 
+- (void)update:(NSString*)value
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        OSStatus status = SecItemUpdate((__bridge CFDictionaryRef)baseAttributes, (__bridge CFDictionaryRef)@{(id)kSecValueData: [value dataUsingEncoding:NSUTF8StringEncoding]});
+                
+        if (status == noErr) {
+            [[self delegate] APSKeychainWrapper:self didUpdateValueWithResult:@{@"success": @YES}];
+        } else {
+            [[self delegate] APSKeychainWrapper:self didUpdateValueWithError:[APSKeychainWrapper errorFromStatus:status]];
+        }
+    });
+}
+
 - (void)reset
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -125,7 +138,8 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
 
 + (NSError*)errorFromStatus:(OSStatus)status
 {
-    NSString *message = [NSString stringWithFormat:@"%ld", (long)status];
+    NSString *message = [NSString stringWithFormat:@"%i", (int)status];
+    NSString *suggestion = [NSString stringWithFormat:@"See https://www.osstatus.com/search/results?platform=all&framework=all&search=-%i for more information", (int)status];
     
     switch (status) {
         case errSecSuccess:
@@ -145,7 +159,7 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
             break;
             
         case errSecParam:
-            message = @"The keychain access failed dies to malformed attributes";
+            message = @"The keychain access failed due to malformed attributes";
             break;
             
         default:
@@ -156,7 +170,10 @@ APSErrorDomain const APSKeychainWrapperErrorDomain = @"com.appcelerator.keychain
     
     return [NSError errorWithDomain:APSKeychainWrapperErrorDomain
                                code:(int)status
-                           userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(message, nil)}];
+                           userInfo:@{
+                                      NSLocalizedDescriptionKey: NSLocalizedString(message, nil),
+                                      NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(suggestion, nil)
+                                }];
 }
 
 - (void)initializeBaseAttributes
