@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AB95B9F2D35B77C91D1C5DD19A90AD5F4F791EDB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DCC233BAAC5351672EE63704F47D5193B1E6EBEF" : 0,
+    "AB95B9F2D35B77C91D1C5DD19A90AD5F4F791EDB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7E7E8A6A-05A2-41AF-AC9B-AF129D6E4096",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DCC233BAAC5351672EE63704F47D5193B1E6EBEF" : "appcelerator.https\/",
+    "AB95B9F2D35B77C91D1C5DD19A90AD5F4F791EDB" : "APSKeychainWrapper\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "APSKeychainWrapper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "APSKeychainWrapper.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hansemannn\/APSKeychainWrapper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB95B9F2D35B77C91D1C5DD19A90AD5F4F791EDB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hansemannn\/appcelerator.https.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCC233BAAC5351672EE63704F47D5193B1E6EBEF"
+    }
+  ]
+}

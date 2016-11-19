@@ -6,115 +6,162 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C9D0608A19491B4B007E488A /* Create Release Folder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C9D0608B19491B4B007E488A /* Build configuration list for PBXAggregateTarget "Create Release Folder" */;
+			buildPhases = (
+				C9D0608E19491D3B007E488A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Create Release Folder";
+			productName = "Create Release Zip";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */; };
-		DBF19E2F1DDE061800D04747 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */; };
-		DBF19E301DDE061800D04747 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */; };
+		C9143B9C19390E1D0039AAEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9143B9B19390E1D0039AAEA /* Foundation.framework */; };
+		C9143BAB19390E1E0039AAEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9143B9B19390E1D0039AAEA /* Foundation.framework */; };
+		C9143BB019390E1E0039AAEA /* libAPSKeychainWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9143B9819390E1D0039AAEA /* libAPSKeychainWrapper.a */; };
+		C9143BB619390E1E0039AAEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9143BB419390E1E0039AAEA /* InfoPlist.strings */; };
+		DBA246BA1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */; };
+		DBA246BB1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */; };
+		DBA246C21DE0A8B200B29722 /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246C11DE0A8B200B29722 /* APSKeychainWrapperTests.m */; };
+		DBA246C41DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA246C31DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist */; };
+		DBA246C51DE0A97B00B29722 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBA246B81DE0A76E00B29722 /* APSKeychainWrapper.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C9143BAE19390E1E0039AAEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9143B9019390E1D0039AAEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9143B9719390E1D0039AAEA;
+			remoteInfo = APSKeychainWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		DBF19E281DDE061800D04747 /* CopyFiles */ = {
+		C9143B9619390E1D0039AAEA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				DBF19E301DDE061800D04747 /* APSKeychainWrapper.h in CopyFiles */,
+				DBA246C51DE0A97B00B29722 /* APSKeychainWrapper.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APSKeychainWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapperTests.m; sourceTree = "<group>"; };
-		DB5E130C1DDE0B3B00CE6C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPSKeychainWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APSKeychainWrapper.h; sourceTree = "<group>"; };
-		DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapper.m; sourceTree = "<group>"; };
+		C9143B9819390E1D0039AAEA /* libAPSKeychainWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPSKeychainWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9143B9B19390E1D0039AAEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9143B9F19390E1D0039AAEA /* APSKeychainWrapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APSKeychainWrapper-Prefix.pch"; sourceTree = "<group>"; };
+		C9143BA819390E1E0039AAEA /* APSKeychainWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APSKeychainWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9143BB519390E1E0039AAEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBA246B81DE0A76E00B29722 /* APSKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSKeychainWrapper.h; sourceTree = "<group>"; };
+		DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapper.m; sourceTree = "<group>"; };
+		DBA246C11DE0A8B200B29722 /* APSKeychainWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSKeychainWrapperTests.m; sourceTree = "<group>"; };
+		DBA246C31DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "APSKeychainWrapperTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB5E13051DDE0B3B00CE6C3D /* Frameworks */ = {
+		C9143B9519390E1D0039AAEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9143B9C19390E1D0039AAEA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBF19E271DDE061800D04747 /* Frameworks */ = {
+		C9143BA519390E1E0039AAEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9143BAB19390E1E0039AAEA /* Foundation.framework in Frameworks */,
+				C9143BB019390E1E0039AAEA /* libAPSKeychainWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB5E13091DDE0B3B00CE6C3D /* APSKeychainWrapperTests */ = {
+		C9143B8F19390E1D0039AAEA = {
 			isa = PBXGroup;
 			children = (
-				DB5E130A1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m */,
-				DB5E130C1DDE0B3B00CE6C3D /* Info.plist */,
-			);
-			path = APSKeychainWrapperTests;
-			sourceTree = "<group>";
-		};
-		DBF19E211DDE061800D04747 = {
-			isa = PBXGroup;
-			children = (
-				DBF19E2C1DDE061800D04747 /* APSKeychainWrapper */,
-				DB5E13091DDE0B3B00CE6C3D /* APSKeychainWrapperTests */,
-				DBF19E2B1DDE061800D04747 /* Products */,
+				C9143B9D19390E1D0039AAEA /* APSKeychainWrapper */,
+				C9143BB119390E1E0039AAEA /* APSKeychainWrapperTests */,
+				C9143B9A19390E1D0039AAEA /* Frameworks */,
+				C9143B9919390E1D0039AAEA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DBF19E2B1DDE061800D04747 /* Products */ = {
+		C9143B9919390E1D0039AAEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */,
-				DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */,
+				C9143B9819390E1D0039AAEA /* libAPSKeychainWrapper.a */,
+				C9143BA819390E1E0039AAEA /* APSKeychainWrapperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBF19E2C1DDE061800D04747 /* APSKeychainWrapper */ = {
+		C9143B9A19390E1D0039AAEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DBF19E2D1DDE061800D04747 /* APSKeychainWrapper.h */,
-				DBF19E2E1DDE061800D04747 /* APSKeychainWrapper.m */,
+				C9143B9B19390E1D0039AAEA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9143B9D19390E1D0039AAEA /* APSKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DBA246B81DE0A76E00B29722 /* APSKeychainWrapper.h */,
+				DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */,
+				C9143B9E19390E1D0039AAEA /* Supporting Files */,
 			);
 			path = APSKeychainWrapper;
+			sourceTree = "<group>";
+		};
+		C9143B9E19390E1D0039AAEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9143B9F19390E1D0039AAEA /* APSKeychainWrapper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9143BB119390E1E0039AAEA /* APSKeychainWrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBA246C11DE0A8B200B29722 /* APSKeychainWrapperTests.m */,
+				C9143BB219390E1E0039AAEA /* Supporting Files */,
+			);
+			path = APSKeychainWrapperTests;
+			sourceTree = "<group>";
+		};
+		C9143BB219390E1E0039AAEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBA246C31DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist */,
+				C9143BB419390E1E0039AAEA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB5E13071DDE0B3B00CE6C3D /* APSKeychainWrapperTests */ = {
+		C9143B9719390E1D0039AAEA /* APSKeychainWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB5E13121DDE0B3B00CE6C3D /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */;
+			buildConfigurationList = C9143BBB19390E1E0039AAEA /* Build configuration list for PBXNativeTarget "APSKeychainWrapper" */;
 			buildPhases = (
-				DB5E13041DDE0B3B00CE6C3D /* Sources */,
-				DB5E13051DDE0B3B00CE6C3D /* Frameworks */,
-				DB5E13061DDE0B3B00CE6C3D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = APSKeychainWrapperTests;
-			productName = APSKeychainWrapperTests;
-			productReference = DB5E13081DDE0B3B00CE6C3D /* APSKeychainWrapperTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DBF19E291DDE061800D04747 /* APSKeychainWrapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBF19E331DDE061800D04747 /* Build configuration list for PBXNativeTarget "APSKeychainWrapper" */;
-			buildPhases = (
-				DBF19E261DDE061800D04747 /* Sources */,
-				DBF19E271DDE061800D04747 /* Frameworks */,
-				DBF19E281DDE061800D04747 /* CopyFiles */,
+				C92DC90F194B7AB8001F33C0 /* ShellScript */,
+				C9143B9419390E1D0039AAEA /* Sources */,
+				C9143B9519390E1D0039AAEA /* Frameworks */,
+				C9143B9619390E1D0039AAEA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -122,233 +169,336 @@
 			);
 			name = APSKeychainWrapper;
 			productName = APSKeychainWrapper;
-			productReference = DBF19E2A1DDE061800D04747 /* libAPSKeychainWrapper.a */;
+			productReference = C9143B9819390E1D0039AAEA /* libAPSKeychainWrapper.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		C9143BA719390E1E0039AAEA /* APSKeychainWrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9143BBE19390E1E0039AAEA /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */;
+			buildPhases = (
+				C92DC910194B7B0A001F33C0 /* ShellScript */,
+				C9143BA419390E1E0039AAEA /* Sources */,
+				C9143BA519390E1E0039AAEA /* Frameworks */,
+				C9143BA619390E1E0039AAEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9143BAF19390E1E0039AAEA /* PBXTargetDependency */,
+			);
+			name = APSKeychainWrapperTests;
+			productName = APSKeychainWrapperTests;
+			productReference = C9143BA819390E1E0039AAEA /* APSKeychainWrapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DBF19E221DDE061800D04747 /* Project object */ = {
+		C9143B9019390E1D0039AAEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Appcelerator;
 				TargetAttributes = {
-					DB5E13071DDE0B3B00CE6C3D = {
-						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
-					};
-					DBF19E291DDE061800D04747 = {
-						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+					C9143BA719390E1E0039AAEA = {
+						TestTargetID = C9D0605E19491129007E488A;
 					};
 				};
 			};
-			buildConfigurationList = DBF19E251DDE061800D04747 /* Build configuration list for PBXProject "APSKeychainWrapper" */;
+			buildConfigurationList = C9143B9319390E1D0039AAEA /* Build configuration list for PBXProject "APSKeychainWrapper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = DBF19E211DDE061800D04747;
-			productRefGroup = DBF19E2B1DDE061800D04747 /* Products */;
+			mainGroup = C9143B8F19390E1D0039AAEA;
+			productRefGroup = C9143B9919390E1D0039AAEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBF19E291DDE061800D04747 /* APSKeychainWrapper */,
-				DB5E13071DDE0B3B00CE6C3D /* APSKeychainWrapperTests */,
+				C9143B9719390E1D0039AAEA /* APSKeychainWrapper */,
+				C9143BA719390E1E0039AAEA /* APSKeychainWrapperTests */,
+				C9D0608A19491B4B007E488A /* Create Release Folder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB5E13061DDE0B3B00CE6C3D /* Resources */ = {
+		C9143BA619390E1E0039AAEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9143BB619390E1E0039AAEA /* InfoPlist.strings in Resources */,
+				DBA246C41DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C92DC90F194B7AB8001F33C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"MDL\"";
+		};
+		C92DC910194B7B0A001F33C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"MDL\"";
+		};
+		C9D0608E19491D3B007E488A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#! /usr/bin/env bash\n\n# Authors: Sabil and Matt\n# Date: 2014.06.11\n#\n# IMPORTANT: This script should be retired after the SDK Engineering\n# team migrates to Cocoa Pods for dependency management and\n# distribution.\n#\n# This script creates a versioned directory of the APSKeychainWrapper\n# library in a subdirectory named \"build\" under the project's root.\n#\n# The version of the library is the build timestamp formatted as the\n# number of seconds since the Unix epoch. For example:\n#\n# build/APSKeychainWrapper-1402532543/\n\n# This is a convenient command to determine a human readable date and\n# time from the version number (replace the last number with the\n# version number):\n#\n# date -j -f \"%s\" 1402532543\n# Wed Jun 11 17:22:23 PDT 2014\n#\n#  The contents of this directory contain a \"universal\" library for\n#  the architectures i386, armv7 and armv7s.\n\n# Sabil and Matt are knowingly overriding the TARGET_NAME environment\n# variable from Xcode since they named the Xcode target that executes\n# this script \"Create Release Folder\".\nTARGET_NAME=\"APSKeychainWrapper\"\n\n# Sabil and Matt are knowingly overriding the CONFIGURATION\n# environment variable from Xcode since they only want distribute\n# Release builds. Engineers wanting a Debug build should simply\n# include this Xcode project directly into their project.\nCONFIGURATION=\"Release\"\n\nAPSKeychainWrapper_VERSION=$(date +%s)\n\nBUILD_DIR=\"${PWD}/build\"\necho \"Assuming BUILD_DIR=${BUILD_DIR}\"\n\nDEVICE_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\nSIMULATOR_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\"\nLIB_NAME=\"lib${TARGET_NAME}.a\"\nDIST_DIR=\"${BUILD_DIR}/${TARGET_NAME}-${APSKeychainWrapper_VERSION}\"\n\nfunction echo_and_eval {\n    local -r cmd=\"${1:?}\"\n    echo \"${cmd}\" && eval \"${cmd}\"\n}\n\nfor sdk in iphoneos iphonesimulator; do\necho_and_eval \"xcodebuild clean -target \\\"${TARGET_NAME}\\\" -sdk ${sdk}\"\necho_and_eval \"xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk ${sdk} OTHER_CFLAGS=\\\"-fembed-bitcode\\\" CLANG_ENABLE_MODULE_DEBUGGING=NO GCC_PRECOMPILE_PREFIX_HEADER=NO DEBUG_INFORMATION_FORMAT=\\\"DWARF with dSYM\\\"\"\ndone\n\necho_and_eval \"mkdir -p \\\"${DIST_DIR}\\\"\"\necho_and_eval \"xcrun -sdk iphoneos lipo -create \\\"${DEVICE_DIR}/${LIB_NAME}\\\" \\\"${SIMULATOR_DIR}/${LIB_NAME}\\\" -o \\\"${DIST_DIR}/${LIB_NAME}\\\"\"\necho_and_eval \"cp -r \\\"${DEVICE_DIR}/include\\\" \\\"${DIST_DIR}\\\"\"\necho_and_eval \"rm -rf \\\"${DEVICE_DIR}\\\"\"\necho_and_eval \"rm -rf \\\"${SIMULATOR_DIR}\\\"\"\necho_and_eval \"rm -rf \\\"${BUILD_DIR}/${TARGET_NAME}.build\\\"\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		DB5E13041DDE0B3B00CE6C3D /* Sources */ = {
+		C9143B9419390E1D0039AAEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB5E130B1DDE0B3B00CE6C3D /* APSKeychainWrapperTests.m in Sources */,
+				DBA246BA1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBF19E261DDE061800D04747 /* Sources */ = {
+		C9143BA419390E1E0039AAEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF19E2F1DDE061800D04747 /* APSKeychainWrapper.m in Sources */,
+				DBA246BB1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */,
+				DBA246C21DE0A8B200B29722 /* APSKeychainWrapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C9143BAF19390E1E0039AAEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9143B9719390E1D0039AAEA /* APSKeychainWrapper */;
+			targetProxy = C9143BAE19390E1E0039AAEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9143BB419390E1E0039AAEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9143BB519390E1E0039AAEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		DB5E13101DDE0B3B00CE6C3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = APSKeychainWrapperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.APSKeychainWrapperTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		DB5E13111DDE0B3B00CE6C3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = APSKeychainWrapperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.APSKeychainWrapperTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		DBF19E311DDE061800D04747 /* Debug */ = {
+		C9143BB919390E1E0039AAEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		DBF19E321DDE061800D04747 /* Release */ = {
+		C9143BBA19390E1E0039AAEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		DBF19E341DDE061800D04747 /* Debug */ = {
+		C9143BBC19390E1E0039AAEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DSTROOT = /tmp/APSKeychainWrapper.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		DBF19E351DDE061800D04747 /* Release */ = {
+		C9143BBD19390E1E0039AAEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DSTROOT = /tmp/APSKeychainWrapper.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C9143BBF19390E1E0039AAEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
+				INFOPLIST_FILE = "APSKeychainWrapperTests/APSKeychainWrapperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9143BC019390E1E0039AAEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
+				INFOPLIST_FILE = "APSKeychainWrapperTests/APSKeychainWrapperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C9D0608C19491B4B007E488A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9D0608D19491B4B007E488A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB5E13121DDE0B3B00CE6C3D /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */ = {
+		C9143B9319390E1D0039AAEA /* Build configuration list for PBXProject "APSKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB5E13101DDE0B3B00CE6C3D /* Debug */,
-				DB5E13111DDE0B3B00CE6C3D /* Release */,
+				C9143BB919390E1E0039AAEA /* Debug */,
+				C9143BBA19390E1E0039AAEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBF19E251DDE061800D04747 /* Build configuration list for PBXProject "APSKeychainWrapper" */ = {
+		C9143BBB19390E1E0039AAEA /* Build configuration list for PBXNativeTarget "APSKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBF19E311DDE061800D04747 /* Debug */,
-				DBF19E321DDE061800D04747 /* Release */,
+				C9143BBC19390E1E0039AAEA /* Debug */,
+				C9143BBD19390E1E0039AAEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBF19E331DDE061800D04747 /* Build configuration list for PBXNativeTarget "APSKeychainWrapper" */ = {
+		C9143BBE19390E1E0039AAEA /* Build configuration list for PBXNativeTarget "APSKeychainWrapperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBF19E341DDE061800D04747 /* Debug */,
-				DBF19E351DDE061800D04747 /* Release */,
+				C9143BBF19390E1E0039AAEA /* Debug */,
+				C9143BC019390E1E0039AAEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D0608B19491B4B007E488A /* Build configuration list for PBXAggregateTarget "Create Release Folder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D0608C19491B4B007E488A /* Debug */,
+				C9D0608D19491B4B007E488A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DBF19E221DDE061800D04747 /* Project object */;
+	rootObject = C9143B9019390E1D0039AAEA /* Project object */;
 }
