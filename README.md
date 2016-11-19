@@ -14,7 +14,7 @@ APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifi
                                                                        accessGroup:@"com.appcelerator.keychain"
                                                                  accessibilityMode:kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
                                                                  accessControlMode:kSecAccessControlTouchIDAny
-                                                                           options:@{@"u_OpPrompt": @"Please authenticate yourself before"}];
+                                                                           options:@{(id)kSecUseOperationPrompt: @"Please authenticate yourself before"}];
 
 // Implement the APSKeychainWrapperDelegate in your class before
 [keychainItem setDelegate:self];
