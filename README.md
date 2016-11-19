@@ -1,4 +1,4 @@
-# APSKeychainWrapper
+# 🔐 APSKeychainWrapper
 
 The `APSKeychainWrapper` is an Objective-C based wrapper to apply advanced access control 
 to the iOS Keychain.
