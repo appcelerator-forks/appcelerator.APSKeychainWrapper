@@ -28,7 +28,6 @@
 		DBA246BA1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */; };
 		DBA246BB1DE0A76E00B29722 /* APSKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246B91DE0A76E00B29722 /* APSKeychainWrapper.m */; };
 		DBA246C21DE0A8B200B29722 /* APSKeychainWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA246C11DE0A8B200B29722 /* APSKeychainWrapperTests.m */; };
-		DBA246C41DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA246C31DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist */; };
 		DBA246C51DE0A97B00B29722 /* APSKeychainWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBA246B81DE0A76E00B29722 /* APSKeychainWrapper.h */; };
 /* End PBXBuildFile section */
 
@@ -197,7 +196,7 @@
 		C9143B9019390E1D0039AAEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Appcelerator;
 				TargetAttributes = {
 					C9143BA719390E1E0039AAEA = {
@@ -230,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9143BB619390E1E0039AAEA /* InfoPlist.strings in Resources */,
-				DBA246C41DE0A8BC00B29722 /* APSKeychainWrapperTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +330,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -350,7 +354,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -369,19 +374,24 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -422,6 +432,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
 				INFOPLIST_FILE = "APSKeychainWrapperTests/APSKeychainWrapperTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcelerator.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -438,6 +449,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSKeychainWrapper/APSKeychainWrapper-Prefix.pch";
 				INFOPLIST_FILE = "APSKeychainWrapperTests/APSKeychainWrapperTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcelerator.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
