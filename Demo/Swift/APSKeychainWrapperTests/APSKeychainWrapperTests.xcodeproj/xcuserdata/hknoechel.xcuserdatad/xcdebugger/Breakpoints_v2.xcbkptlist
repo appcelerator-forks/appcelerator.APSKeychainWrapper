@@ -73,8 +73,24 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "../../appcelerator_modules/APSKeychainWrapper/APSKeychainWrapper/APSKeychainWrapper.m"
+            timestampString = "501481436.189447"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-update:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "APSKeychainWrapperTests/ViewController.swift"
-            timestampString = "501295404.841186"
+            timestampString = "501484669.291904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -90,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "APSKeychainWrapperTests/ViewController.swift"
-            timestampString = "501295404.841186"
+            timestampString = "501484669.896383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -106,23 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "APSKeychainWrapperTests/ViewController.swift"
-            timestampString = "501295404.841186"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "apsKeychainWrapper(_:didReadValueWithError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "APSKeychainWrapperTests/ViewController.swift"
-            timestampString = "501481411.154592"
+            timestampString = "501484671.410311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -137,13 +137,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../appcelerator_modules/APSKeychainWrapper/APSKeychainWrapper/APSKeychainWrapper.m"
-            timestampString = "501481436.189447"
+            filePath = "APSKeychainWrapperTests/ViewController.swift"
+            timestampString = "501484672.607961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-update:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "apsKeychainWrapper(_:didReadValueWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
