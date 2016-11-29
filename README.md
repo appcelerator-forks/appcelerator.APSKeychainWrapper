@@ -8,34 +8,41 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
 ### Example
 
 ```objc
-// Create a new keychain item instance
-APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifier:@"myaccount"
-                                                                           service:@"com.appcelerator.service"
-                                                                       accessGroup:@"com.appcelerator.keychain"
-                                                                 accessibilityMode:kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
-                                                                 accessControlMode:kSecAccessControlTouchIDAny
-                                                                           options:@{(id)kSecUseOperationPrompt: @"Please authenticate yourself before"}];
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 
-// Implement the APSKeychainWrapperDelegate in your class before
-[keychainItem setDelegate:self];
+    // Create a new keychain item instance
+    APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifier:@"myaccount"
+                                                                               service:@"com.appcelerator.service"
+                                                                           accessGroup:@"com.appcelerator.keychain"
+                                                                     accessibilityMode:kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
+                                                                     accessControlMode:kSecAccessControlTouchIDAny
+                                                                               options:@{(id)kSecUseOperationPrompt: @"Please authenticate yourself before"}];
 
-// Check existence asynchronously, since the result might be
-// delayed by the user-interacton (e.g. Touch ID)
-[keychainItem exists:^(BOOL result) {
-    NSLog(@"Does item exist: %lu", result);
-}];
+    // Implement the APSKeychainWrapperDelegate in your class before
+    [keychainItem setDelegate:self];
 
-// Read
-[keychainItem read];
+    // Check existence asynchronously, since the result might be
+    // delayed by the user-interacton (e.g. Touch ID)
+    [keychainItem exists:^(BOOL result) {
+        NSLog(@"Does item exist: %lu", result);
+    }];
 
-// Save
-[keychainItem save:@"my_secret_password"];
+    // Read
+    [keychainItem read];
 
-// Update
-[keychainItem update:@"my_new_secret_password"];
+    // Save
+    [keychainItem save:@"my_secret_password"];
 
-// Reset
-[keychainItem reset];
+    // Update
+    [keychainItem update:@"my_new_secret_password"];
+
+    // Reset
+    [keychainItem reset];
+}
+
+#pragma mark Delegates
 
 - (void)APSKeychainWrapper:(APSKeychainWrapper *)keychainWrapper didSaveValueWithResult:(NSDictionary *)result
 {
