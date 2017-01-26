@@ -30,7 +30,16 @@
 }
 
 - (IBAction)readFromKeychain {
-    [_keychainItem read];
+    [_keychainItem exists:^(BOOL exists, NSError *error) {
+        if (error) {
+            NSLog(@"Error reading from keychain: %@", [error localizedDescription]);
+            return;
+        }
+        
+        if (exists) {
+            [_keychainItem read];
+        }
+    }];
 }
 
 - (IBAction)updateToKeychain {

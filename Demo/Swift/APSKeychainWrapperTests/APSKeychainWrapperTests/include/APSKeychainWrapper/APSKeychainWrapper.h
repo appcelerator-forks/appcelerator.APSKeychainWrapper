@@ -87,7 +87,7 @@ typedef NSString *APSErrorDomain;
 @end
 
 /**
- The `APSKeychainWrapper` provides an interface to read, save and reset keychain items 
+ The `APSKeychainWrapper` provides an interface to read, save and reset keychain items
  based on their configured options.
  */
 @interface APSKeychainWrapper : NSObject {
@@ -115,7 +115,7 @@ typedef NSString *APSErrorDomain;
  @param identifier The identifier of the keychain item.
  @param service The service of the keychain item.
  @param accessGroup The access group of the keychain item.
-
+ 
  @return The newly-initialized keychain item
  */
 - (id)initWithIdentifier:(NSString*)identifier
@@ -147,7 +147,7 @@ typedef NSString *APSErrorDomain;
  
  @param completionBlock The block to be invoked when the existence has been determined.
  */
-- (void)exists:(void (^)(BOOL result))completionBlock;
+- (void)exists:(void (^)(BOOL exists, NSError *error))completionBlock;
 
 /**
  Saves a new value to the keychain. The value is identified by it's keychain

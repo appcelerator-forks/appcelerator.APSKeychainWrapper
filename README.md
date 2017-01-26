@@ -25,8 +25,13 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
 
     // Check existence asynchronously, since the result might be
     // delayed by the user-interacton (e.g. Touch ID)
-    [keychainItem exists:^(BOOL result) {
-        NSLog(@"Does item exist: %lu", result);
+    [keychainItem exists:^(BOOL success, NSError *error) {
+        if (error) {
+            NSLog(@"Error checking existence: %@", [error localizedDescription]);
+            return;
+        }
+        
+        NSLog(@"Does item exist: %lu", success);
     }];
 
     // Read

@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "apsKeychainWrapper(_:didReadValueWithResult:)"
+            landmarkName = "apsKeychainWrapper(_:didUpdateValueWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "apsKeychainWrapper(_:didSaveValueWithResult:)"
+            landmarkName = "apsKeychainWrapper(_:didReadValueWithResult:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "apsKeychainWrapper(_:didDeleteValueWithResult:)"
+            landmarkName = "apsKeychainWrapper(_:didSaveValueWithResult:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "apsKeychainWrapper(_:didUpdateValueWithResult:)"
+            landmarkName = "apsKeychainWrapper(_:didDeleteValueWithResult:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "apsKeychainWrapper(_:didUpdateValueWithError:)"
+            landmarkName = "apsKeychainWrapper(_:didDeleteValueWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "apsKeychainWrapper(_:didDeleteValueWithError:)"
+            landmarkName = "apsKeychainWrapper(_:didSaveValueWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "apsKeychainWrapper(_:didSaveValueWithError:)"
+            landmarkName = "apsKeychainWrapper(_:didReadValueWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -143,7 +143,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "apsKeychainWrapper(_:didReadValueWithError:)"
+            landmarkName = "deleteFromKeychain()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

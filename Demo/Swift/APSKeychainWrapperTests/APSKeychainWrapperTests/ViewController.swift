@@ -24,7 +24,16 @@ class ViewController: UIViewController, APSKeychainWrapperDelegate {
     }
     
     @IBAction func readFromKeychain() {
-        keychainItem.read()
+        keychainItem.exists({ (success: Bool, error: Error?) in
+            if (error != nil) {
+                print("Error reading from keychain: \(error?.localizedDescription)")
+                return
+            }
+            
+            if success {
+                self.keychainItem.read()
+            }
+        })
     }
     
     @IBAction func updateToKeychain() {

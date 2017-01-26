@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "-APSKeychainWrapper:didReadValueWithError:"
+            landmarkName = "-deleteFromKeychain"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "-APSKeychainWrapper:didSaveValueWithError:"
+            landmarkName = "-APSKeychainWrapper:didReadValueWithResult:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "-APSKeychainWrapper:didSaveValueWithResult:"
+            landmarkName = "-APSKeychainWrapper:didSaveValueWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "-APSKeychainWrapper:didUpdateValueWithError:"
+            landmarkName = "-APSKeychainWrapper:didSaveValueWithResult:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "-APSKeychainWrapper:didUpdateValueWithResult:"
+            landmarkName = "-APSKeychainWrapper:didUpdateValueWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "-APSKeychainWrapper:didDeleteValueWithResult:"
+            landmarkName = "-APSKeychainWrapper:didDeleteValueWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "-APSKeychainWrapper:didReadValueWithResult:"
+            landmarkName = "-APSKeychainWrapper:didReadValueWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
