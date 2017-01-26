@@ -7,6 +7,8 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
 
 ### Example
 
+#### Objective-C
+
 ```objc
 - (void)viewDidLoad
 {
@@ -15,7 +17,7 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
     // Create a new keychain item instance
     APSKeychainWrapper *keychainItem = [[[APSKeychainWrapper alloc] initWithIdentifier:@"myaccount"
                                                                                service:@"com.appcelerator.service"
-                                                                           accessGroup:@"com.appcelerator.keychain"
+                                                                           accessGroup:@"$(AppIdentifierPrefix)com.appcelerator.keychain"
                                                                      accessibilityMode:kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
                                                                      accessControlMode:kSecAccessControlTouchIDAny
                                                                                options:@{(id)kSecUseOperationPrompt: @"Please authenticate yourself before"}];
@@ -90,6 +92,70 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
 }
 ```
 
+#### Swift
+```swift
+let keychainItem = APSKeychainWrapper(identifier: "myaccount", service: "com.appcelerator.service", accessGroup: "$(AppIdentifierPrefix)com.appcelerator.keychain")
+
+// Implement the APSKeychainWrapperDelegate in your class before
+keychainItem.delegate = self
+
+// Check existence asynchronously, since the result might be
+// delayed by the user-interacton (e.g. Touch ID)
+keychainItem.exists({ (success: Bool, error: Error?) in
+    if (error != nil) {
+        print("Error reading from keychain: \(error?.localizedDescription)")
+        return
+    }
+    
+    if success {
+        self.keychainItem.read()
+    }
+})
+
+// Read
+keychainItem.read()
+
+// Save
+keychainItem.save("my_secret_password")
+
+// Update
+keychainItem.update(@"my_new_secret_password")
+
+// Reset
+keychainItem.reset()
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didReadValueWithError error: Error!) {
+    // Keychain value saved successfully
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didSaveValueWithError error: Error!) {
+    // Keychain value not saved, error occurred
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didDeleteValueWithError error: Error!) {
+    // Keychain value received successfully
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didUpdateValueWithError error: Error!) {
+    // Keychain value not received, error occurred
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didReadValueWithResult result: [AnyHashable : Any]!) {
+    // Keychain value updated successfully
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didSaveValueWithResult result: [AnyHashable : Any]!) {
+    // Keychain value not updated, error occurred
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didDeleteValueWithResult result: [AnyHashable : Any]!) {
+    // Keychain value deleted successfully
+}
+
+func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didUpdateValueWithResult result: [AnyHashable : Any]!) {
+    // Keychain value not deleted, error occurred
+}
+```
 
 ### Author
 Hans Knoechel ([@hansemannnn](https://twitter.com/hansemannnn) / [Web](http://hans-knoechel.de))
