@@ -123,7 +123,7 @@ keychainItem.update("my_new_secret_password")
 keychainItem.reset()
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didReadValueWithError error: Error!) {
-    // Keychain value saved successfully
+    // Keychain value not received, error occurred
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didSaveValueWithError error: Error!) {
@@ -131,19 +131,19 @@ func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didSaveValueWith
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didDeleteValueWithError error: Error!) {
-    // Keychain value received successfully
+    // Keychain value not deleted, error occurred
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didUpdateValueWithError error: Error!) {
-    // Keychain value not received, error occurred
+    // Keychain value not updated, error occurred
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didReadValueWithResult result: [AnyHashable : Any]!) {
-    // Keychain value updated successfully
+    // Keychain value received successfully
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didSaveValueWithResult result: [AnyHashable : Any]!) {
-    // Keychain value not updated, error occurred
+    // Keychain value saved successfully
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didDeleteValueWithResult result: [AnyHashable : Any]!) {
@@ -151,7 +151,7 @@ func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didDeleteValueWi
 }
 
 func apsKeychainWrapper(_ keychainWrapper: APSKeychainWrapper!, didUpdateValueWithResult result: [AnyHashable : Any]!) {
-    // Keychain value not deleted, error occurred
+    // Keychain value updated successfully
 }
 ```
 
