@@ -25,8 +25,7 @@ It's primary purpose for now is to be used in the Apcpelerator Titanium module [
     // Implement the APSKeychainWrapperDelegate in your class before
     [keychainItem setDelegate:self];
 
-    // Check existence asynchronously, since the result might be
-    // delayed by the user-interacton (e.g. Touch ID)
+    // Check existence asynchronously, since the result might be delayed by the user-interacton (e.g. Touch ID)
     [keychainItem exists:^(BOOL success, NSError *error) {
         if (error) {
             NSLog(@"Error checking existence: %@", [error localizedDescription]);
@@ -99,8 +98,7 @@ let keychainItem = APSKeychainWrapper(identifier: "myaccount", service: "com.app
 // Implement the APSKeychainWrapperDelegate in your class before
 keychainItem.delegate = self
 
-// Check existence asynchronously, since the result might be
-// delayed by the user-interacton (e.g. Touch ID)
+// Check existence asynchronously, since the result might be delayed by the user-interacton (e.g. Touch ID)
 keychainItem.exists({ (success: Bool, error: Error?) in
     if (error != nil) {
         print("Error reading from keychain: \(error?.localizedDescription)")
@@ -119,7 +117,7 @@ keychainItem.read()
 keychainItem.save("my_secret_password")
 
 // Update
-keychainItem.update(@"my_new_secret_password")
+keychainItem.update("my_new_secret_password")
 
 // Reset
 keychainItem.reset()
